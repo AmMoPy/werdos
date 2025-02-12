@@ -280,8 +280,10 @@ section {
 
   /* Upload Options */
   .upload-options {
+    display: flex;
     flex-direction: column; /* Stack upload buttons vertically */
     gap: 10px; /* Reduce gap between buttons */
+    align-items: center; /* Center buttons horizontally */
   }
 
   .btn {
