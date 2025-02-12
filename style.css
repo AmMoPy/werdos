@@ -221,14 +221,21 @@ section {
 }
 
 /* Examples Section */
+.example-grid-wrapper {
+  overflow: hidden; /* Hide overflow to prevent horizontal scrolling */
+  width: 100%; /* Take up full width of the container */
+  position: relative; /* Needed for absolute positioning of scroll arrows */
+}
+
 .example-grid {
   display: flex;
-  overflow: hidden;
+/*  overflow: hidden;*/
   gap: 20px;
 /*  padding: 20px 0;*/
-  width: max-content; /* Ensure the grid is wide enough to fit all images */
+  width: max-content; /* Allow the grid to expand to fit all images */
   position: relative;
   animation: scroll 50s linear infinite;
+  white-space: nowrap; /* Prevent wrapping of images */
 }
 
 .example-grid:hover {
@@ -253,4 +260,63 @@ section {
 .example-image:hover {
   transform: scale(1.1);
   animation-play-state: paused;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* General Adjustments */
+  .container {
+    width: 95%; /* Increase container width for smaller screens */
+    padding: 10px; /* Reduce padding */
+  }
+
+  header h1 {
+    font-size: 2rem; /* Smaller font size for header */
+  }
+
+  header p {
+    font-size: 1rem; /* Smaller font size for header paragraph */
+  }
+
+  /* Upload Options */
+  .upload-options {
+    flex-direction: column; /* Stack upload buttons vertically */
+    gap: 10px; /* Reduce gap between buttons */
+  }
+
+  .btn {
+    width: 100%; /* Full-width buttons */
+    padding: 10px; /* Adjust padding */
+  }
+
+  /* Results Section */
+  .result-item {
+    width: 45%; /* Smaller result items for mobile */
+  }
+
+  .result-item img {
+    width: 100px; /* Smaller images */
+    height: 100px;
+  }
+
+  /* Examples Section */
+  .example-grid {
+    gap: 10px; /* Reduce gap between images */
+  }
+
+  .example-image {
+    width: 100px; /* Smaller images */
+    height: 100px;
+  }
+
+  /* Scroll Arrows */
+  .scroll-arrows {
+    display: none; /* Hide scroll arrows on mobile */
+  }
+
+  /* Footer */
+  footer .footer-links {
+    flex-direction: column; /* Stack footer links vertically */
+    gap: 5px; /* Reduce gap between links */
+  }
 }
