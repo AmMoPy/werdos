@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FLOOFS Classifier - AI Image Classification</title>
   <meta name="description" content="Interface for a convolutional neural network (CNN) trained on a small dataset for AI image classification of cats and dogs. Confront dem FLOOFS with thier real identity!">
-  <meta name="keywords" content="AI, image classification, machine learning, deep learning">
+  <meta name="keywords" content="AI, image classification, machine learning, deep learning, gradio, web app">
   <meta name="author" content="AmMoPy">
   <meta property="og:title" content="FLOOFS Classifier - AI Image Classification">
   <meta property="og:description" content="Interface for a convolutional neural network (CNN) trained on a small dataset for AI image classification of cats and dogs. Confront dem FLOOFS with thier real identity!">
-  <!-- <meta property="og:image" content="img_link"> -->
+  <meta property="og:image" content="https://drive.google.com/uc?id=1eAP0TKVQ1ekU1iFY-zvvy5L5cNwxwTgK">
   <meta property="og:url" content="https://ammopy.github.io/werdos/">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="FLOOFS Classifier - AI Image Classification">
   <meta name="twitter:description" content="Interface for a convolutional neural network (CNN) trained on a small dataset for AI image classification of cats and dogs. Confront dem FLOOFS with thier real identity!">
-  <!-- <meta name="twitter:image" content="img_link"> -->
+  <meta name="twitter:image" content="https://drive.google.com/uc?id=1eAP0TKVQ1ekU1iFY-zvvy5L5cNwxwTgK">
   <link rel="canonical" href="https://ammopy.github.io/werdos/">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.min.css">
@@ -60,19 +60,51 @@
     </div>
   </section>
 
+  <!-- Contact Form Modal -->
+  <div id="contact-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>How may I assist you?</h2>
+      <form id="contact-form">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required placeholder="Enter the subject">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer>
     <div class="container">
       <p>© 2025 FLOOFS Classifier. All rights reserved.</p>
       <div class="footer-links">
-        <a href="https://github.com/ammopy" target="_blank">GitHub</a>
-        <a href="https://huggingface.co/ammopy" target="_blank">Hugging Face</a>
         <a href="https://github.com/ammopy/zaps" target="_blank">Zaps</a>
-        <a href="mailto:amr.haleem@gmail.com">Contact</a>
+        <a href="https://huggingface.co/ammopy" target="_blank">Hugging Face</a>
+        <a href="https://linkedin.com/in/amrmuhamad" target="_blank">LinkedIn</a>
+        <a href="https://youtube.com/@ammopy" target="_blank">YouTube</a>
+        <a href="https://github.com/ammopy" target="_blank">GitHub</a>
+        <a href="#" id="contact-link">Contact</a>
       </div>
     </div>
   </footer>
 
+  <!-- Main -->
   <script type="module" src="main.min.js"></script>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script src="emailjs.min.js"></script>
+
+  <!-- GoatCounter Analytics -->
+  <script data-goatcounter="https://ammopy.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
