@@ -1,3 +1,6 @@
 style.css
 main.js
 emailjs.js
+email.min.js
+count.js
+api/sendEmail.js

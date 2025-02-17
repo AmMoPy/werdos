@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self'; 
+  script-src 'self' https://cdn.jsdelivr.net https://ammopy.goatcounter.com https://gc.zgo.at; 
+  style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+  font-src 'self' https://fonts.gstatic.com;
+  img-src 'self' data: blob: https://raw.githubusercontent.com; 
+  connect-src 'self' https://werdos.vercel.app;
+  form-action 'self';
+  ">
   <title>Troubled FLOOFS - AI Image Classifier</title>
   <meta name="description" content="Interface for a convolutional neural network (CNN) trained on a small dataset for AI image classification of cats and dogs. Confront dem FLOOFS with thier real identity!">
   <meta name="keywords" content="AI, image classification, machine learning, deep learning, gradio, web app">
@@ -66,15 +75,13 @@
       <span class="close">&times;</span>
       <h2>How may I assist you?</h2>
       <form id="contact-form">
+        <!-- <input type="hidden" id="csrf-token" name="csrf-token" value="<Generate CSRF token dynamically"> -->
         <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required placeholder="Enter your email">
-
+        <input type="email" id="email" name="email" required placeholder="ana@hena.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
         <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" required placeholder="Enter the subject">
-
+        <input type="text" id="subject" name="subject" required placeholder="Awesome Demo" maxlength="100">
         <label for="message">Message</label>
-        <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
-
+        <textarea id="message" name="message" required placeholder="bla bla bla" maxlength="1000"></textarea>
         <button type="submit">Send</button>
       </form>
     </div>
@@ -99,12 +106,22 @@
   <script type="module" src="main.min.js"></script>
 
   <!-- EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script 
+  type="text/javascript" 
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" 
+  integrity="sha384-VDbnsk/qjpIVHPQMkJiROI+vW/7cw0k8TFYVLUabm7EWoLEDwcXh09XQ6gQ86Y0B"
+  crossorigin="anonymous"
+  ></script>
 
-  <script src="emailjs.min.js"></script>
+  <script src="emailjs.js"></script>
 
   <!-- GoatCounter Analytics -->
-  <script data-goatcounter="https://ammopy.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
+  <script 
+  data-goatcounter="https://ammopy.goatcounter.com/count"
+  async 
+  src="https://gc.zgo.at/count.js" 
+  integrity="sha384-QfJMxHNngbaF6IXH2kBwubsLYh7GVSFmJOX1O1YKJBq+zv1VVypB9BysTzyG1D1U"
+  crossorigin="anonymous"
+  ></script>
 </body>
 </html>
