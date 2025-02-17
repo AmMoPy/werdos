@@ -9,7 +9,12 @@
   style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
   font-src 'self' https://fonts.gstatic.com;
   img-src 'self' data: blob: https://raw.githubusercontent.com; 
-  connect-src 'self' https://api.huggingface.co https://huggingface.co https://ammopy-werdos.hf.space https://werdos.vercel.app;
+  connect-src 'self' 
+  https://api.huggingface.co 
+  https://huggingface.co 
+  https://ammopy-werdos.hf.space 
+  https://werdos.vercel.app
+  https://ammopy.goatcounter.com;
   form-action 'self';
   ">
   <title>Troubled FLOOFS - AI Image Classifier</title>
@@ -75,9 +80,9 @@
       <span class="close">&times;</span>
       <h2>How may I assist you?</h2>
       <form id="contact-form">
-        <!-- <input type="hidden" id="csrf-token" name="csrf-token" value="<Generate CSRF token dynamically"> -->
+        <input type="hidden" id="csrf-token" name="csrf-token">
         <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required placeholder="ana@hena.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <input type="email" id="email" name="email" required placeholder="ana@hena.com" pattern="[^\s@]+@[^\s@]+\.[^\s@]+">
         <label for="subject">Subject</label>
         <input type="text" id="subject" name="subject" required placeholder="Awesome Demo" maxlength="100">
         <label for="message">Message</label>
