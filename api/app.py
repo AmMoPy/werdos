@@ -1,4 +1,5 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastai.vision.all import load_learner
 from io import BytesIO
 from PIL import Image
@@ -8,6 +9,13 @@ learn = load_learner('/cnn/model_2_ep_new_data.pkl')
 
 # Initialize FastAPI
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://ammopy.github.io/werdos"],
+    allow_methods=["POST"],  # Allow only POST requests
+    allow_headers=["*"],
+)
 
 @app.post("/predict")
 async def predict(image: UploadFile = File(..., description = "Upload an image for classification")):
