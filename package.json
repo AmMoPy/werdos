@@ -1,0 +1,8 @@
+{
+  "name": "sendEmail",
+  "version": "1",
+  "type": "module",
+  "dependencies": {
+    "@emailjs/browser": "^3.10.0"
+  }
+}
