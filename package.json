@@ -3,6 +3,6 @@
   "version": "1",
   "type": "module",
   "dependencies": {
-    "@emailjs/browser": "^3.10.0"
+    "@emailjs/nodejs": "^1.0.0"
   }
 }
