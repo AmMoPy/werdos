@@ -1,6 +1,6 @@
-style.css
-main.js
-emailjs.js
+css/style.css
+js/main.js
+js/emailjs.js
 email.min.js
 count.js
 api/sendEmail.js

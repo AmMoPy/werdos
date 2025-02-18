@@ -14,12 +14,17 @@
   https://huggingface.co 
   https://ammopy-werdos.hf.space 
   https://werdos.vercel.app
-  https://ammopy.goatcounter.com;
+  https://ammopy.goatcounter.com
+  https://api.ipify.org;
   form-action 'self';
   ">
   <title>Troubled FLOOFS - AI Image Classifier</title>
   <meta name="description" content="Interface for a convolutional neural network (CNN) trained on a small dataset for AI image classification of cats and dogs. Confront dem FLOOFS with thier real identity!">
-  <meta name="keywords" content="AI, image classification, machine learning, deep learning, gradio, web app">
+  <meta name="keywords" content="
+  AI image classification, machine learning image recognition, deep learning image classifier, cat and dog image classification, 
+  CNN image classification, image recognition web app, AI-powered image analysis, AI image recognition for pets, deepseek web development, 
+  vercel api form submission, gradio api model deployment, ammopy werdos
+  ">
   <meta name="author" content="AmMoPy">
   <meta property="og:title" content="Troubled FLOOFS - AI Image Classifier">
   <meta property="og:description" content="Interface for a convolutional neural network (CNN) trained on a small dataset for AI image classification of cats and dogs. Confront dem FLOOFS with thier real identity!">
@@ -31,7 +36,7 @@
   <meta name="twitter:image" content="https://raw.githubusercontent.com/ammopy/werdos/main/inf_cs/cat_lost_in_thoughs.jpg">
   <link rel="canonical" href="https://ammopy.github.io/werdos/">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -50,6 +55,22 @@
       </div>
     </div>
   </header>
+
+  <!-- Privacy Policy Popup -->
+  <div id="privacy-popup" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-privacy-popup">&times;</span>
+      <h2>FLOOFS World Domination</h2>
+      <p>This data is ours once you upload an image</p>
+      <ul>
+        <li>Your IP Address</li>
+        <li>Image Metadata (file name, size, type)</li>
+      </ul>
+      <p>By clicking "Accept", you play by FLOOFS rules!</p>
+      <button id="accept-privacy-policy">Accept</button>
+      <button id="reject-privacy-policy">Reject</button>
+    </div>
+  </div>
 
   <!-- Results Section -->
   <section id="results-section">
@@ -108,7 +129,7 @@
   </footer>
 
   <!-- Main -->
-  <script type="module" src="main.min.js"></script>
+  <script type="module" src="js/main.min.js"></script>
 
   <!-- EmailJS SDK -->
   <script 
@@ -118,7 +139,7 @@
   crossorigin="anonymous"
   ></script>
 
-  <script src="emailjs.min.js"></script>
+  <script src="js/emailjs.min.js"></script>
 
   <!-- GoatCounter Analytics -->
   <script 
