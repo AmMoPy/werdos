@@ -48,11 +48,6 @@
       <div class="upload-options">
         <label for="image-upload" class="btn">Upload Image(s)</label>
         <input type="file" id="image-upload" accept="image/*" multiple style="display: none;" disabled>
-      </div>
-      <div id="loading" class="loading" style="display: none;">
-        <div class="loader"></div>
-        <p>Resolving Identity Crisis...</p>
-      </div>
     </div>
   </header>
 
@@ -73,15 +68,11 @@
   </div>
 
   <!-- Results Section -->
-  <section id="results-section">
+  <section id="results-section" style="display: none;">
     <div class="container">
       <h2>Final Verdict</h2>
       <div id="results" class="results-grid"></div>
       <button id="clear-results" class="btn">New FLOOFS</button>
-      <div class="scroll-arrows">
-        <button class="scroll-arrow" id="scroll-left">&#10094;</button>
-        <button class="scroll-arrow" id="scroll-right">&#10095;</button>
-      </div>
     </div>
   </section>
 
@@ -128,9 +119,9 @@
     </div>
   </footer>
 
+  <!-- page loading animation -->
   <div id="loading-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; color: white; font-size: 24px;">
     <img src="inf_cs/cat_spinning.gif" alt="Loading..." />
-    <!-- <p>Gathering FLOOFS...</p> -->
   </div>
 
   <!-- Main -->
