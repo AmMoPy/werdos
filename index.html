@@ -26,7 +26,6 @@
   vercel api form submission, gradio api model deployment, ammopy werdos
   ">
   <meta name="author" content="AmMoPy">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="Troubled FLOOFS - AI Image Classifier">
   <meta property="og:description" content="Interface for a convolutional neural network (CNN) trained on a small dataset for AI image classification of cats and dogs. Confront dem FLOOFS with thier real identity!">
   <meta property="og:image" content="https://raw.githubusercontent.com/ammopy/werdos/main/inf_cs/cat_lost_in_thoughs.jpg">
@@ -41,14 +40,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Cookies Animation -->
+  <canvas id="matrix-canvas"></canvas>
+
   <!-- Header -->
   <header>
     <div class="container">
       <h1>Troubled FLOOFS</h1>
-      <p>Upload an image and let our AI classify it for you!</p>
+      <p>Upload an image and discover your FLOOF's true identity!</p>
       <div class="upload-options">
-        <label for="image-upload" class="btn">Upload Image(s)</label>
+        <!-- CSS pseudo-element requires input to be immediately followed by the label  -->
+        <!-- Since you are lazy requiring minimal modifications dont change this setup!  -->
         <input type="file" id="image-upload" accept="image/*" multiple style="display: none;" disabled>
+        <label id="upload-image-btn" for="image-upload" class="btn">Upload Image(s)</label>
       </div>
       <!-- Privacy Policy Checkbox -->
       <div id="privacy-banner">
@@ -62,7 +66,7 @@
   <!-- Privacy Policy Popup -->
   <div id="privacy-popup" class="modal">
     <div class="modal-content">
-      <span class="close" id="close-privacy-popup">&times;</span>
+      <span class="close-privacy" id="close-privacy-popup">&times;</span>
       <h2>FLOOFS World Domination</h2>
       <p>Below data is ours once you upload an image</p>
       <ul>
@@ -117,11 +121,11 @@
     <div class="container">
       <p>© 2025 FLOOFS Classifier. All rights reserved.</p>
       <div class="footer-links">
-        <a href="https://github.com/ammopy/zaps" target="_blank">Zaps</a>
+        <a href="https://ammopy.github.io/AmMoPy/" target="_blank">About Me</a>
+        <a href="https://github.com/ammopy" target="_blank">GitHub</a>
         <a href="https://huggingface.co/ammopy" target="_blank">Hugging Face</a>
         <a href="https://linkedin.com/in/amrmuhamad" target="_blank">LinkedIn</a>
         <a href="https://youtube.com/@ammopy" target="_blank">YouTube</a>
-        <a href="https://github.com/ammopy" target="_blank">GitHub</a>
         <a href="#" id="contact-link">Contact</a>
       </div>
     </div>
